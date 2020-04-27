@@ -12,7 +12,3 @@ function movieRequest() {
     }
 }
 
-function jqueryMovieRequest() {
-    var API_URL = "http://www.omdbapi.com/?apikey=80eb4b4&t=A-star-is-born"; // I save the API URL since this is a costant.
-
-}
