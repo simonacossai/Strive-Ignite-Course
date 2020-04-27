@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/MoviePosters.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/MoviePoster.css"/>
+    <title>Movie Posters</title>
+
+
+    <style>
+    body { background: #ffe4c4 !important;}
+
+    .row{
+    height:500px;
+    }
+    img{
+        max-width:100%;
+        padding:10px;
+        margin-top: 20px;
+        -webkit-filter: blur(3px);
+        filter: blur(3px);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        box-shadow:  10px  10px 5px rgba(0, 0, 0, 0.4),
+                    -10px -10px 5px rgba(0, 0, 0, 0.4),
+                     10px -10px 5px rgba(0, 0, 0, 0.4),
+                    -10px  10px 5px rgba(0, 0, 0, 0.4);
+    }
+    
+    .main-cover{
+        position:relative;
+    }
+
+    .main-cover>i{
+        position:absolute;
+        text-align: center;
+        display:none;
+        left:48%;
+        top:50%;
+        color: white;
+        font-size:50px;
+    }
+    
+    .main-cover:hover>i{
+        display:block;
+    }
+  
+     .main-cover:hover > .poster{
+      filter:blur(0px);
+  }
+    
+    img:hover{
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    }
+    .fa-play:hover
+    
+    img:hover>i{
+        display:block;
+    }
+    
+    input[type=submit]{
+    width: 150px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family:'Noto Sans SC', sans-serif;
+    background-color:rgba(49, 49, 49, 0.664);
+    margin-left: 550px;
+    margin-bottom: 60px;
+    }
+    
+    input[type="submit"]:hover{
+    background-color: rgba(201, 76, 76, 0.9);
+    }
+    a:hover {
+    color: black;
+    }
+
+</style>
+</head>
+    <body>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <div class="main-cover">
+                    <img class="poster" src="../img/herposter.jpg"/>
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 d-md-block d-none">
+                <div class="main-cover">
+                    <img class="poster" src="../img/herposter.jpg"/>
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 d-md-block d-none">
+                <div class="main-cover">
+                    <img class="poster" src="../img/herposter.jpg"/>
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+            <div class="col-lg-3 d-lg-block d-md-none d-none">
+                <div class="main-cover">
+                    <img class="poster" src="../img/herposter.jpg"/>
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <div class="main-cover">
+                    <img class="poster" src="../img/herposter.jpg"/>
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 d-md-block d-none">
+                <div class="main-cover">
+                    <img class="poster" src="../img/herposter.jpg"/>
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 d-md-block d-none">
+                <div class="main-cover">
+                    <img class="poster" src="../img/herposter.jpg"/>
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+            <div class="col-lg-3 d-lg-block d-md-none d-none">
+                <div class="main-cover">
+                    <img class="poster" src="../img/herposter.jpg"/>
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+            <hr width=50% size=8  color=000000 align="center;" style="margin-top: 40px;">
+            
+            <a href= "../html/SecondPage.html">
+                <input type="submit" value="Log in" style="color: white;">
+            </a>
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

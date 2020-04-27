@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Hello, world!</title>
+<style>
+  body { background:  #060c21 !important;}
+
+  img{
+  max-width: 100%;
+  width:300px;
+  margin-left: 180px;
+  margin-right:180px;
+  margin-top: 50px;
+}
+
+  p{
+  margin-top:30px;
+  text-align:center;
+  font-size:60px;
+  color:white;
+}
+
+  span:hover{
+  text-shadow: 0 0 10px #fd00da, 0 0 20px #0000FF;
+  transition: .5s ease-in-out;
+}
+  span{
+    margin-top: 15px;
+  display: inline-flex;
+  margin-left:180px;
+  font-size: 30px;
+  color:white;
+}
+  .row {
+  display: flex;
+}
+
+  .column {
+  flex: 50%;
+  padding: 5px;
+  position:relative;
+}
+
+  .column>i{
+  align-items: center;
+  align-content: center;
+  position:absolute;
+  text-align: center;
+  display:none;
+  left:50%;
+  top:50%;
+  color: white;
+  font-size:50px;     
+}
+
+  .column:hover>i{
+  display:block;
+  transition: .5s ease-in-out;    
+}
+
+@keyframes img {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px  #fd00da, 0 0 70px  rgb #fd00da, 0 0 80px  #fd00da, 0 0 100px   #fd00da, 0 0 150px  #fd00da;
+  }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #97029c, 0 0 35px  #97029c, 0 0 40px  #97029c, 0 0 50px  #97029c, 0 0 75px  #97029c;
+  }
+}
+
+  .column:hover>img{
+  width:320px;
+  -webkit-animation: img 1.5s ease-in-out infinite alternate;
+  -moz-animation: img 1.5s ease-in-out infinite alternate;
+  animation: img 1.5s ease-in-out infinite alternate;
+  animation-duration: 2s;
+  width:320px;
+  transition: .5s ease-in-out;
+ 
+  }
+</style>
+</head>
+
+<body>
+    <p>Top 10 movies</p>
+    <div class="row">
+      <div class="column">
+        <img  src="../img/herposter.jpg"/>
+        <i class="fa fa-play"></i>
+        <span>1)Her</span>
+      </div>
+      <div class="column">
+        <img  src="../img/astarisborn.jpg"/>
+        <i class="fa fa-play"></i>
+        <span>2)A star is born</span> 
+      </div>
+      <div class="column">
+        <img  src="../img/danishgirl.jpg"/>
+        <i class="fa fa-play"></i>
+        <span>3)The Danish girl</span>
+      </div>
+      <div class="column">
+        <img  src="../img/dunkirk.jpg"/>
+        <i class="fa fa-play"></i>
+        <span>4)Dunkirk</span>
+      </div>
+      <div class="column">
+        <img  src="../img/jokerposter.jpg"/>
+        <i class="fa fa-play"></i>
+        <span>5)Joker</span>
+      </div>
+      <div class="column">
+        <img  src="../img/monsterhunter.jpg"/>
+        <i class="fa fa-play"></i>
+        <span>6)Monster Hunter</span>
+      </div>
+      <div class="column">
+        <img  src="../img/movieposter.jpg"/>
+        <i class="fa fa-play"></i>
+        <span>7)The Shining</span>
+      </div>
+      <div class="column">
+        <img  src="../img/sevenpounds.jpg"/>
+        <i class="fa fa-play"></i>
+        <span>8)Seven Pounds</span>
+      </div>
+      <div class="column">
+        <img  src="../img/tedbundy.jpg"/>
+        <i class="fa fa-play"></i>
+        <span>9)Ted Bundy</span>
+      </div>
+      <div class="column">
+        <img  src="../img/titanic.jpg"/>
+        <i class="fa fa-play"></i>
+        <span>10)Titanic</span>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

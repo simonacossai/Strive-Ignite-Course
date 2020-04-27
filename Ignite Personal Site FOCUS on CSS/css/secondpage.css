@@ -1,0 +1,64 @@
+html, body {
+    display: block;
+    clear: both;
+    float: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+.backgroundsecondpage {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(62deg, #ff9056 0%, #fdd050 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+#nav{
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 65px;
+    top:0%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navitem{
+    font-size: 30px;
+    font-weight:bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
+    margin-top: 9px;
+}
+
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:45px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
+}
+
+div p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:25px;
+    color: black;   
+}
+
+ul {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:25px;
+    color: black;
+}
+
+li {
+    margin: 15px 0;
+}
+a:hover {
+    color: black;
+  }

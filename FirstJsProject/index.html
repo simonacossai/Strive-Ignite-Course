@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strive Ignite - Week 3 // Day 2</title>
+</head>
+<body>
+    <h2>Inspect the page to find the excercises ;-)</h2>
+​
+    <script>
+        /*
+        
+        1) Create function testMe that creates 3 variables and returns their product
+        2) Create function AI that respond "hi" if the parameter is "hello", "I cannot understand" otherwise
+        3) Create function tripleSum that receives 3 numbers and returns the product of them
+        4) Create function factorial that calculates the factorial of the given param
+        5) Create function calculator with 3 params, two numbers (param1 and param2) and a sign between "+","-","*","/". Return the operation between param1 and param2
+        6) Create function absolute that returns the absolute value of the parameter (es.: p = 1 returns 1, p = -27 returns 27)
+        7) Create function fizzBuzz that returns fizz if param is multiple of 3, buzz if multiple of 7, fizzbuzz if multiple of 3 and 7. Otherwise returns the same number
+        8) Create function positive that returns true if the params is greater than 0
+        9) Create function transform that receives a number between 0 and 9 and returns a string containing the number (ex.: 0 returns "zero", 1 returns "one")
+​
+        */
+        function testMe(){
+            let firstvariable=2
+            let secondvariable=5
+            let thirdvariable=1
+            return firstvariable*secondvariable*thirdvariable;
+        }
+
+        function AI(regards){
+            if (regards == "hello") {
+                return "hi"
+            } else {
+                return "I cannot understand"
+            }
+        }
+
+        function tripleSum(n1, n2, n3){
+            return n1*n2*n3;
+        }
+
+        function factorial(param){
+          return (param != 1) ? param * factorial(param - 1) : 1;
+          }
+        function calculator(param1, param2, sign){
+            if (sign=== "+")
+            {return param1+param2}
+            else if(sign === "-")
+            {return param1-param2}
+            else if(sign === "*")
+            {return param1*param2}
+            else(sign === "/")
+            {return param1/param2}
+        }
+        
+        function absolute(number){
+            return number
+        }
+        function fizzBuzz(n){
+           if(n%3==0 && n%7==0){
+                return "fizzBuzz"
+            }
+           else if(n%3==0){
+                return "fizz"
+            }
+            else if (n%7==0){
+                return "Buzz"
+            }
+            else{
+                return n
+            }
+        }
+        function positive(num){
+            if (num>0){
+                return true}
+
+                else{
+                    return false
+                } 
+        }
+        function transform(num){
+                if(num==0)
+                {return "zero"}
+               else if(num==1)
+               {return "one"}
+               else if(num==2)
+               {return "two"}
+               else if(num==3)
+               {return "three"}
+               else if(num==4)
+               {return "four"}
+               else if(num==5)
+               {return "five"}
+               else if(num==6)
+               {return "six"}
+               else if(num==7)
+               {return "seven"}
+               else if(num==8)
+               {return "eight"}
+               else if(num==9)
+               {return "nine"}
+               else(num<0 || num>9)
+                 { return "error"}
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5ea9116197.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>Chat</title>
+    
+</head>
+<body>
+ <div class="mobile">
+     <div class="top"></div>
+     <div class="bottom"></div>
+     <div class="screen">      
+   <img src="../img/background.jpg"> 
+   <h2>11:50<span>AM</span><br><span>18th April 2020</span></h2>
+        <div class="chat-bar">
+<img src="../img/left.png">
+<span>Frank Smith</span>
+<i class= "fa fa-phone" aria-hidden="true"></i>
+</div>
+
+<div class="right-chat">
+<span>Hi Frank! Long time no see. How are you?</span>
+<img src="../img/right.png">
+<p>12:30am</p>
+</div>
+
+
+<div class="left-image">
+    <img src="../img/left.png"> 
+</div>
+<div class="left-chat">
+    <span>Hello Simona. I'm fine, and what about you?</span>
+    <p>12:31am</p>
+</div>
+<div class="right-answer">
+    <span>I'm really good, thank you.</span>
+    <img src="../img/right.png">
+    <p>12:35am</p>
+    </div>
+    <div class="received-image">
+        <img src="../img/left.png">
+    </div>
+<div class="received-message">
+    <div class="send-image">
+        <img src="../img/right.png">
+    </div>
+    <span> Glad to hear that<p class="left-date">12:40am</p></span>
+</div>
+
+<div class="send-message">
+    <span>How about going out tonight?</span>
+    <p>12:40am</p>
+</div>
+
+
+   </div> 
+     </div>
+
+
+
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+    $('.bottom').click(function(){
+        $('.screen').toggleClass('active')
+    })
+
+ })
+
+
+</script>
+</body>
+</html>
