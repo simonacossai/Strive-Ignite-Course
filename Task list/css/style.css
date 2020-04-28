@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+  }
+  
+  body{
+    background-color: #42455a;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    list-style: none;
+    margin-right:270px;
+    margin-left:270px;
+  }
+  ul li:last-child{
+      border-bottom-left-radius: 20px !important;
+      border-bottom-right-radius: 20px !important;
+  }
+ 
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  ul li.done {
+    color: white;
+    background: #888;
+    text-decoration: line-through;
+    text-decoration-color: fuchsia;
+    text-decoration-thickness: 2px;
+  }
+  
+  ul li.done::before {
+    content: '';
+    position: absolute;
+    border-color: #fd00da;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 15px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  
+  .delete {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  .delete:hover{
+      color:#fd00da;
+  }
+  .header {
+    background-image:radial-gradient(circle at top left, #fd00da, #19d7f8);
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    margin-left:270px;
+    margin-right:270px;
+    margin-top:2rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+  #clear{
+    margin:0;
+    margin-top: 10px;
+    border:none;
+    border-radius:0;
+    width:15% !important;
+    padding:10px;
+    margin-left:270px;
+    background-image:radial-gradient(circle at top left, #fd00da, #19d7f8);
+    color:white;
+    font-size:20px;
+    font-weight:400;
+    border-radius:15px;
+  }
+  #completedonly{
+      width:20px;
+      height:20px;
+      margin-left:280px;
+      margin-top:20px;
+  }
+  .addBtn {
+    padding: 10px;
+    width: 25%;
+    background-color:#DCDCDC;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+  
+  .addBtn:hover {
+    background-color:#EE82EE;
+    color:black;
+  }
+  .hidden{
+      display:none;
+  }
