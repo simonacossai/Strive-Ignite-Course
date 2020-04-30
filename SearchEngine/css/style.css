@@ -2,6 +2,13 @@ body{
     font-family: 'Roboto', sans-serif;
     object-fit: cover;
     width:100%;
+    background-color: rgb(19, 14, 32);
+}
+a{
+    margin:0 auto;
+}
+.logo{
+    margin:0 auto;
 }
 .spinner-grow{
     margin:0 auto;
@@ -13,17 +20,38 @@ h1{
    font-weight: 400;
 }
 
-#search{
+#resultedimages{
+    background-color: rgb(19, 14, 32);
+    object-fit: cover;
+    border: 0;
+    border-radius: 0;
+}
+.card{
+    background-color:  rgb(19, 14, 32);
+    object-fit: cover;
+    border-radius: 0;
+    padding:0;
+
+}
+#searchbar{
     margin-left:45%;
     margin-bottom:2rem;
     margin-top:1rem;
     border-color: #581845;  
 }
+.alert{
+    background-color: rgba(207, 24, 207, 0.438);
+    color:white;
+}
 #button{
     margin-left: 50%;
     margin-top: 1rem;
-    background-color: #581845 ;
+    background-color: #C020C9; 
     
+}
+
+#button:hover{
+    background-color: #A81CB0;
 }
 img{
     width:100%;

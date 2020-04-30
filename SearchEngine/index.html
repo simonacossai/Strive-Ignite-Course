@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Hello, world!</title>
   </head>
-  <body background="img/background.jpg">
+  <body>
     <div class="container">
       <div class="row">
-          <h1>Search engine</h1>
+        <a href="https://fontmeme.com/web-2-0-fonts/"><img src="https://fontmeme.com/permalink/200430/9085638b5db008297e77859e7948cf72.png" alt="web-2-0-fonts"  class="logo"></a>
       </div>
       <div class="row">
           <div class="col">
-              <input type="text" id="search" class="form-control" />
+              <input type="text" class="form-control" id="searchbar" />
           </div>
           <div class="col">
               <input type="button" id="button" class="btn btn-primary" value="search" onclick="search()" />
@@ -33,24 +33,26 @@
           <span class="sr-only">Loading...</span>
         </div>
       </div>
-      <div class="alert alert-primary" role="alert" style="display:none;">
-        No result for what you're searching!
+      <div class="alert alert-danger" role="alert" style="display: none;">
+      No result for what you're searching. Try something else!
       </div>
-      <div class="row no-gutters" id="search-result">
+      <div class="row no-gutters" id="result">
 
       </div>
   </div>
 
     <script>
     async function search() {
-            let searchValue = document.querySelector("#search").value
+          var searchValue = document.querySelector("#searchbar").value
+           
             document.querySelector(".spinner-border").style.display = "block"
-            let response = await fetch("http://www.splashbase.co/api/v1/images/search?query=" + searchValue)
+            var response = await fetch("http://www.splashbase.co/api/v1/images/search?query=" + searchValue)
             document.querySelector(".spinner-border").style.display = "none"
+           
             if (response.ok) {
                 let imagesJson = await response.json()
-                let searchResult = document.querySelector("#search-result")
-                searchResult.innerHTML = ""
+                let searchResult = document.querySelector("#result")
+                searchResult.innerHTML = " "
 
                 if (imagesJson.images.length === 0) {
                     document.querySelector(".alert").style.display = "block"
@@ -60,16 +62,15 @@
                     imagesJson.images.forEach(image => {
                         let newDiv = document.createElement("div")
                         newDiv.className = "card col-md-4 col-lg-3"
-                        newDiv.innerHTML = `<img src="${image.url}" class="card-img-top" alt="...">`
+                        newDiv.innerHTML = `<img src="${image.url}" class="card-img-top" alt="images" id="resultedimages">`
                         newDiv.addEventListener("click", (e) => {
                             e.currentTarget.remove()
                         })
                         searchResult.appendChild(newDiv)
                     });
                 }
-
-
             }
+            
         }
 
     </script>
