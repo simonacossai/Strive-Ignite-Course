@@ -4,9 +4,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Netflix</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="wrapper">
@@ -24,6 +25,8 @@
         <a href="#">MyList</a>   
       </nav>
       <nav class="sub-nav">
+      <a href="#">  
+        <input type="text" class="form-control" id="search_field" placeholder="Search..." style="height: 30px;" style="width: 70px;"></a>
         <a href="#"><i class="fas fa-search sub-nav-logo"></i></a>
         <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a>
         <a href="#">Account</a>        
@@ -51,77 +54,22 @@
             </select>
         </div>
 
-          <h1 id="home">Trending Now</h1>
-          <div class="box">
-            <a href=""><img src="https://www.cinematographe.it/wp-content/uploads/2019/03/884027.jpg" alt=""></a>
-            <a href=""><img src="https://www.cinematographe.it/wp-content/uploads/2019/03/884027.jpg" alt=""></a>
-            <a href=""><img src="https://www.cinematographe.it/wp-content/uploads/2019/03/884027.jpg" alt=""></a>
-            <a href=""><img src="https://www.cinematographe.it/wp-content/uploads/2019/03/884027.jpg" alt=""></a>
-            <a href=""><img src="https://www.cinematographe.it/wp-content/uploads/2019/03/884027.jpg" alt=""></a>
-            <a href=""><img src="https://www.cinematographe.it/wp-content/uploads/2019/03/884027.jpg" alt=""></a>
-            <a href=""><img src="https://www.cinematographe.it/wp-content/uploads/2019/03/884027.jpg" alt=""></a>
-            <a href=""><img src="https://www.cinematographe.it/wp-content/uploads/2019/03/884027.jpg" alt=""></a>
-            <a href=""><img src="https://www.cinematographe.it/wp-content/uploads/2019/03/884027.jpg" alt=""></a>
-            <a href=""><img src="https://www.cinematographe.it/wp-content/uploads/2019/03/884027.jpg" alt=""></a>
-            <a href=""><img src="https://www.cinematographe.it/wp-content/uploads/2019/03/884027.jpg" alt=""></a>
-            <a href=""><img src="https://www.cinematographe.it/wp-content/uploads/2019/03/884027.jpg" alt=""></a>    
-          </div>
-      </div>
-      
 
-      <h1 id="myList">Watch It Again</h1>
-      <div class="box">
-        <a href=""><img src="https://mr.comingsoon.it/imgdb/locandine/poster/55452_hd.jpg" alt=""></a>
-        <a href=""><img src="https://mr.comingsoon.it/imgdb/locandine/poster/55452_hd.jpg" alt=""></a>
-        <a href=""><img src="https://mr.comingsoon.it/imgdb/locandine/poster/55452_hd.jpg" alt=""></a>
-        <a href=""><img src="https://mr.comingsoon.it/imgdb/locandine/poster/55452_hd.jpg" alt=""></a>
-        <a href=""><img src="https://mr.comingsoon.it/imgdb/locandine/poster/55452_hd.jpg" alt=""></a>
-        <a href=""><img src="https://mr.comingsoon.it/imgdb/locandine/poster/55452_hd.jpg" alt=""></a>
-      </div>
-      
-      <h1 id="tvShows">Now Releases</h1>
-      <div class="box">
-        <a href=""><img src="https://www.italiamobilesrl.it/blog/wp-content/uploads/2017/09/storia-netflix-narcos-755x420.jpg" alt=""></a>
-        <a href=""><img src="https://www.italiamobilesrl.it/blog/wp-content/uploads/2017/09/storia-netflix-narcos-755x420.jpg" alt=""></a>
-        <a href=""><img src="https://www.italiamobilesrl.it/blog/wp-content/uploads/2017/09/storia-netflix-narcos-755x420.jpg" alt=""></a>
-        <a href=""><img src="https://www.italiamobilesrl.it/blog/wp-content/uploads/2017/09/storia-netflix-narcos-755x420.jpg" alt=""></a>  
-        <a href=""><img src="https://www.italiamobilesrl.it/blog/wp-content/uploads/2017/09/storia-netflix-narcos-755x420.jpg" alt=""></a>
-        <a href=""><img src="https://www.italiamobilesrl.it/blog/wp-content/uploads/2017/09/storia-netflix-narcos-755x420.jpg" alt=""></a>
-        <a href=""><img src="https://www.italiamobilesrl.it/blog/wp-content/uploads/2017/09/storia-netflix-narcos-755x420.jpg" alt=""></a>
-      
+           <div id="app" class="container">
+  
 
-        <a href=""><img src="https://www.chedonna.it/wp-content/uploads/2019/04/13-reason-why-1280x720.jpg" alt=""></a>
-        <a href=""><img src="https://www.chedonna.it/wp-content/uploads/2019/04/13-reason-why-1280x720.jpg" alt=""></a>
-        <a href=""><img src="https://www.chedonna.it/wp-content/uploads/2019/04/13-reason-why-1280x720.jpg" alt=""></a>
-        <a href=""><img src="https://www.chedonna.it/wp-content/uploads/2019/04/13-reason-why-1280x720.jpg" alt=""></a>
-        <a href=""><img src="https://www.chedonna.it/wp-content/uploads/2019/04/13-reason-why-1280x720.jpg" alt=""></a>
-        <a href=""><img src="https://www.chedonna.it/wp-content/uploads/2019/04/13-reason-why-1280x720.jpg" alt=""></a>    
-      </div>
-      
+    <br>
+    <br>
 
-      <h1 id="movies">Netflix Originals</h1>
-      <div class="box">
-        <a href=""><img src="https://colonnesonore.altervista.org/wp-content/uploads/2019/06/the-society-netflix.jpg" alt=""></a>
-        <a href=""><img src="https://colonnesonore.altervista.org/wp-content/uploads/2019/06/the-society-netflix.jpg" alt=""></a>
-        <a href=""><img src="https://colonnesonore.altervista.org/wp-content/uploads/2019/06/the-society-netflix.jpg" alt=""></a>
-        <a href=""><img src="https://colonnesonore.altervista.org/wp-content/uploads/2019/06/the-society-netflix.jpg" alt=""></a>
-        <a href=""><img src="https://colonnesonore.altervista.org/wp-content/uploads/2019/06/the-society-netflix.jpg" alt=""></a>
-        <a href=""><img src="https://colonnesonore.altervista.org/wp-content/uploads/2019/06/the-society-netflix.jpg" alt=""></a>                
-      </div>
+    <div id="loading">
+      <p class="text-center">Results are loading...</p>
+    </div>
 
-      <h1 id="originals">Continue watching</h1>
-      <div class="box">
-        <a href=""><img src="https://accademiadellascrittura.it/files/uploads/2020/01/You.jpeg" alt=""></a>
-        <a href=""><img src="https://accademiadellascrittura.it/files/uploads/2020/01/You.jpeg" alt=""></a>
-        <a href=""><img src="https://accademiadellascrittura.it/files/uploads/2020/01/You.jpeg" alt=""></a>
-        <a href=""><img src="https://accademiadellascrittura.it/files/uploads/2020/01/You.jpeg" alt=""></a>
-        <a href=""><img src="https://accademiadellascrittura.it/files/uploads/2020/01/You.jpeg" alt=""></a>
-        <a href=""><img src="https://accademiadellascrittura.it/files/uploads/2020/01/You.jpeg" alt=""></a>                
-      </div>
-     
-    <!-- END OF MAIN CONTAINER -->
+    <div id="movies" class="row">
 
-    <!-- LINKS -->
+    </div>
+  </div>
+    <!-- LINKS-->
     <section class="link">
       <div class="logos">
         <a href="#"><i class="fab fa-facebook-square fa-2x logo"></i></a>
@@ -148,11 +96,23 @@
     </section>
     <!-- END OF LINKS -->
 
-    <!-- FOOTER -->
+    <!-- FOOTER-->
     <footer>
       <p> Netflix, Inc.</p>
       <p>Simona Cossai - 2020</p>
     </footer>
+  
   </div>
+
+
+
+
+<script
+src="https://code.jquery.com/jquery-3.1.1.min.js"
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/index.js"></script>
 </body>
+
 </html>

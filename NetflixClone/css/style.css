@@ -17,7 +17,7 @@
   h1 {
     padding-top: 60px;  
   }
-  
+
   .wrapper {
     margin: 0;
     padding: 0;
@@ -91,8 +91,11 @@
   .main-nav a:hover {
     color: #686868;
   }
-  
-  .sub-nav {
+  #search_field{
+    margin-top: -8px;
+  }
+  .sub-nav { 
+    display:flex;
     grid-area: sb;
     padding: 0 40px 0 40px;
     z-index:400;
@@ -111,33 +114,43 @@
 
   }
   
-  
   /* MAIN CONTIANER */
   .main-container {
+      display:flex;
     padding: 50px;
   }
   
-  .box {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(6, minmax(100px, 1fr));
+
+  #movies{
+    flex-grow:1;
   }
-  
-  .box a {
-    transition: transform .3s;  
+  #movies-searchable img{
+    width: 500px;
+    height: 300px;
   }
-  
-  .box a:hover {
-    transition: transform .3s;
-    -ms-transform: scale(1.4);
-    -webkit-transform: scale(1.4);  
-    transform: scale(1.4);
+  #search{
+    color:white;
+    background-color: black;
+    border-color: white;
+    font-size: 1rem; 
+    outline:none;
+    min-height:30px;
+    font-weight: 400;
+    text-align:center;
+    cursor:pointer;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    border-radius: .25rem;
   }
-  
-  .box img {
-    border-radius: 2px;
+  #inputValue{
+    width: 760px;
+    font-size: 1rem;
+     font-weight: 400;
+      outline:none;
+     padding: .375rem .75rem;
+
+    border-radius: .25rem;
   }
-  
   
   /* LINKS */
   .link {
@@ -303,3 +316,39 @@
     }   
      
   }
+
+
+ 
+input{
+    padding: 12px 16px !important;
+}
+
+.movie{
+    text-align: center;
+    padding: 10px;
+}
+.movie img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all .4s linear;
+}
+
+
+.card-body{
+    padding: 0px;
+    overflow: hidden;
+}
+
+#loading p{
+    animation: animZoom 1s ease-out infinite;
+}
+
+@keyframes animZoom{
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
