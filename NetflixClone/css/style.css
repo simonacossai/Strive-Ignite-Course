@@ -88,6 +88,36 @@
     margin: 10px;  
   }
   
+
+.container {
+  text-align: center;
+  margin: 0 auto;
+  font-family: Arial;
+}
+
+.films li {
+  width: 350px;
+  list-style-type: none;
+  padding: 10px;
+  background-color:  #141414;
+}
+
+
+
+.films li img {
+  width: 400px;
+  height: 250px;
+  padding: 2px;
+  background-color: black;
+}
+
+.films {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+
   .main-nav a:hover {
     color: #686868;
   }

@@ -1,31 +1,4 @@
-/*function movieRequest() {
-    let httpRequest =  new XMLHttpRequest(); 
-    httpRequest.open("GET","http://www.omdbapi.com/?apikey=80eb4b4&t=A-star-is-born",false); 
-    httpRequest.send(null); 
-    let repText = httpRequest.responseText; 
-     let json_obj = JSON.parse(repText); 
-     if (json_obj.Response == "False") {  
-         console.log("There was an error.");
-     } else { 
-         console.log(json_obj.Poster); 
-         document.querySelector("#result").style.background = `url(${json_obj.Poster})`;
-    
-     }
- }
 
- 
-var API_URL = "http://www.omdbapi.com/?apikey=80eb4b4&t=A-star-is-born";
- function jsonMovie () { 
-     $.getJSON(API_URL,function(movie){  
-       console.log(movie.Poster); 
-   
-     })
-   }
-
-   window.onload = async () => {
-            await movieRequest()
-        }
-*/
 
 
 $(document).ready(function(){
@@ -68,9 +41,6 @@ function search($search){
     
 
 function getMovies(search){
-
-    if($type == "all") $type = ['movie', 'series'];
-
     axios.get('https://www.omdbapi.com', {
         params: {
             apikey: "4a858268",
@@ -96,3 +66,79 @@ function getMovies(search){
 
     $("#loading").hide();
 }
+
+
+ const getMovie = (movieTitle, movies) => {
+    return fetch(`https://www.omdbapi.com/?t=${movieTitle}&apikey=4a858268`)
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        return data;
+      })
+      .catch(error => {
+        console.warn(error);
+      });
+  };
+
+  const favMovies = [
+    "Batman: The Dark Knight Returns",
+    "The Fast and the Furious",
+    "The Bourne Ultimatum",
+    "The Bourne Identity",
+    "Cars",
+    'batwoman',
+    'nancy%20drew',
+    'the%20flash',
+    'black%20lightning',
+    'arrow',
+    'supergirl',
+    'titans',
+    'riverdale',
+    'lucifer'
+  ];
+
+  const movies = [];
+  let output = "";
+
+  
+  console.log(output);
+
+  getMovie(favMovies[0])
+    .then(movie => movies.push(movie))
+    .then(() => getMovie(favMovies[1]))
+    .then(movie => movies.push(movie))
+    .then(() => getMovie(favMovies[2]))
+    .then(movie => movies.push(movie))
+    .then(() => getMovie(favMovies[3]))
+    .then(movie => movies.push(movie))
+    .then(() => getMovie(favMovies[4]))
+    .then(movie => movies.push(movie))
+     .then(() => getMovie(favMovies[5]))
+    .then(movie => movies.push(movie))
+        .then(() => getMovie(favMovies[6]))
+    .then(movie => movies.push(movie))
+        .then(() => getMovie(favMovies[7]))
+    .then(movie => movies.push(movie))
+        .then(() => getMovie(favMovies[8]))
+    .then(movie => movies.push(movie))
+        .then(() => getMovie(favMovies[9]))
+    .then(movie => movies.push(movie))
+        .then(() => getMovie(favMovies[10]))
+    .then(movie => movies.push(movie))
+  
+    .then(() => {
+      console.log(movies);
+
+      const listContainer = document.querySelector(".films");
+
+      movies.forEach(movie => {
+        const markup = `
+        <li>
+          <img src=${movie.Poster}> </img>
+        </li>
+        `;
+
+        listContainer.innerHTML += markup;
+      });
+    })

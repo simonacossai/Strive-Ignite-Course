@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,7 +9,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>Hello, world!</title>
+    <title>Restaurant</title>
+    <style>
+        .list-group-item{
+            display:flex;
+            justify-content: space-between;
+        }
+    </style>
+
   </head>
   <body>
 
@@ -37,80 +45,68 @@
 
         <section>
             <h1 class="about">Let's meat</h1>
-            <div class="container my-5">
-                <div class="row col">
-                    <form>
-                        <input type="hidden" value="" id="current-event" />
-                        <div class="form-group">
-                          <label for="name">Name</label>
-                          <input type="text" class="form-control" id="name" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="phonenumber">Phone number</label>
-                            <input type="tel" class="form-control" id="phonenumber" placeholder="">
-                          </div>
-                          <div class="form-group">
-                            <label for="numberofperson">Number of person</label>
-                            <input type="number" class="form-control" id="numberofperson" placeholder="">
-                          </div>
-                          <p>Do you smoke?</p>
-                          <div>
-                            <input type="checkbox" id="smokingtrue" name="smokingtrue"
-                                   checked>
-                            <label for="smoking">True</label>
-                          </div>
-                          
-                          <div>
-                            <input type="checkbox" id="smokingfalse" name="smokingfalse">
-                            <label for="horns">False</label>
-                          </div>
-                          
-                          <div class="form-group">
-                            <label for="date">Date</label>
-                            <input type="date" class="form-control" id="date" placeholder="">
-                          </div>
-                          <div class="form-group">
-                            <label for="specialrequests">Special Requests:</label>
-                            <textarea class="form-control" id="description" rows="3"></textarea>
-                          </div>
-                          <div class="form-group">
-                              <input type="button" value="Create Event" id="create-button" class="btn btn-success"/>
-                        </div>
-                      </form>
-                </div>
-            </div>
+            
+    <div class="container my-5">
+        <h1>Backoffice for events</h1>
+        <div class="row">
+            <ul class="list-group col" id="current-events">
+                <!-- <li class="list-group-item disabled" aria-disabled="true">Cras justo odio</li> -->
+                <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li> -->
+            </ul>
+        </div>
+    </div>
+
+    <input type="text" id="name" placeholder="name">
+    <input type="text" id="extra" placeholder="extra">
+    <input type="text" id="phone" placeholder="phone">
+    <input type="number" id="numberOfPersons">
+    <input type="checkbox" id="smoker">
+    <input type="datetime-local" id="date">
+
+    <input type="button" onclick="sendReservation()" />
+
+    <ul id="reservations"></ul>
+
         </section>
-<!--    
-       You are creating a presentation page for a restaurant.
-       The restaurant website will include a carousel with some pictures, a jumbotron with a catchy slogan and a reservation form.
-​
-       In the reservation form, the user can select:
-​
-       - Name
-       - Phone number
-       - Number of persons
-       - Smoking (true / false)
-       - Date and Time
-       - Special Requests
-​
-       These reservation will be sent to the owner of the restaurant trough a REST API.
-​
-       https://striveschool.herokuapp.com/api/reservation/
-​
-       The API accepts JSON as content payload and provides the usual REST features:
-​
-       - GET https://striveschool.herokuapp.com/api/reservation/ ==> Fetch all the reservations
-       - GET https://striveschool.herokuapp.com/api/reservation/{id} ==> Fetch a single reservation
-       - POST https://striveschool.herokuapp.com/api/reservation/ ==> Submit a new reservation
-       - PUT https://striveschool.herokuapp.com/api/reservation/{id} ==> Edit a single reservation
-       - DELETE https://striveschool.herokuapp.com/api/reservation/{id} ==> Delete a single reservation
-​
-       [EXTRA]
-       Create a "back office" page where the restaurants' manager can edit / delete / check reservations.
-​
--->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      window.onload = async () => {
+          await loadReservations()
+      }
+      async function loadReservations() {
+    let reservations = await fetch("https://striveschool.herokuapp.com/api/reservation/")
+    let resObj = await reservations.json()
+
+    let list = document.querySelector("#reservations")
+    list.innerHTML += resObj.map(x => `<li>${x.name} -> ${x.numberOfPersons} </li>`).join("")
+}
+
+async function sendReservation() {
+    let myReservation = {
+        name: document.querySelector("#name").value,
+        numberOfPersons: document.querySelector("#numberOfPersons").value,
+        smoker: document.querySelector("#name").checked,
+        dateTime: document.querySelector("#date").value,
+        extra: document.querySelector("#extra").value,
+        phone: document.querySelector("#phone").value,
+    }
+
+    let reservations = await fetch("https://striveschool.herokuapp.com/api/reservation/", {
+        method: "PU",
+        headers: {
+            "content-type": "application/json"
+        },
+        body: JSON.stringify(myReservation)
+    })
+
+    await loadReservations()
+}
+  </script>
     <script src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
