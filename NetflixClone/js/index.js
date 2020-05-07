@@ -130,7 +130,7 @@ function getMovies(search){
     .then(() => {
       console.log(movies);
 
-      const listContainer = document.querySelector(".films");
+      const listContainer = document.querySelector(".movie-container");
 
       movies.forEach(movie => {
         const markup = `
