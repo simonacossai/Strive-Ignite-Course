@@ -77,11 +77,12 @@ const getMovie = (movieTitle, movies) => {
   };
 
   const favMovies = [
-    "Batman: The Dark Knight Returns",
-    "The Fast and the Furious",
-    "The Bourne Ultimatum",
+    "the-100",
+     "Stranger Things",
+      "Supernatural",
+    "game-of-thrones",
     "The Bourne Identity",
-    "Cars",
+    "the-walking-dead",
     'batwoman',
     'nancy%20drew',
     'the%20flash',
@@ -98,6 +99,7 @@ const getMovie = (movieTitle, movies) => {
 
   
   console.log(output);
+ 
 
   getMovie(favMovies[0])
     .then(movie => movies.push(movie))
@@ -121,6 +123,14 @@ const getMovie = (movieTitle, movies) => {
     .then(movie => movies.push(movie))
         .then(() => getMovie(favMovies[10]))
     .then(movie => movies.push(movie))
+        .then(() => getMovie(favMovies[11]))
+    .then(movie => movies.push(movie))
+        .then(() => getMovie(favMovies[12]))
+    .then(movie => movies.push(movie))
+        .then(() => getMovie(favMovies[13]))
+    .then(movie => movies.push(movie))
+        .then(() => getMovie(favMovies[14]))
+    .then(movie => movies.push(movie))
   
     .then(() => {
       console.log(movies);
@@ -140,3 +150,39 @@ const getMovie = (movieTitle, movies) => {
         listContainer.innerHTML += markup;
       });
     })
+
+
+/*
+const getMovies = (movieTitle, movies) => {
+    return fetch(`https://www.omdbapi.com/?t=${movieTitle}&apikey=4a858268`)
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        return data;
+      })
+      .catch(error => {
+        console.warn(error);
+      });
+  };
+
+
+     const favMovies2 = [
+    "dragon-ball-super",
+    "Stranger Things",
+    "the-big-bang-theory",
+    "vikings",
+    "westworld",
+    "the-walking-dead",
+    "daredevil",
+    "marvel-s-agents-of-s-h-i-e-l-d",
+    "prison-break",
+    "mr-robot",
+    "rick-and-morty",
+    "one-punch-man",
+    "teen-wolf",
+    "brooklyn-nine-nine",
+    'lucifer'
+  ];
+*/
+
