@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function(){
 
     $("#loading").hide();
@@ -39,7 +36,6 @@ function search($search){
     }
 }
     
-
 function getMovies(search){
     axios.get('https://www.omdbapi.com', {
         params: {
@@ -67,8 +63,7 @@ function getMovies(search){
     $("#loading").hide();
 }
 
-
- const getMovie = (movieTitle, movies) => {
+const getMovie = (movieTitle, movies) => {
     return fetch(`https://www.omdbapi.com/?t=${movieTitle}&apikey=4a858268`)
       .then(response => {
         return response.json();
@@ -130,13 +125,16 @@ function getMovies(search){
     .then(() => {
       console.log(movies);
 
-      const listContainer = document.querySelector(".movie-container");
+      const listContainer = document.querySelector(".films");
 
       movies.forEach(movie => {
-        const markup = `
-        <li>
-          <img src=${movie.Poster}> </img>
-        </li>
+        const markup = 
+           `<div class="movie col-md-2">
+                            <div class="card-body">
+                              <img src=${movie.Poster}> </img>
+                            </div>
+                    </div>
+                
         `;
 
         listContainer.innerHTML += markup;
