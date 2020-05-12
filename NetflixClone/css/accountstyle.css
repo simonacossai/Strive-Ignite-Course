@@ -8,6 +8,7 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     line-height: 1.4;
+    overflow-x: hidden;
   }
   
    /* header start */
@@ -166,21 +167,159 @@ margin-top:-30px;
   margin-left: 148px;
   margin-top: -10px;
 }
-.membership-right-col .strivemail{
-  margin-top: 0;
-  margin-left:148px;
+.email-right-col{
+  flex-basis: 35%;
 }
-.membership-right-col i{
-  display:block;
+.email-left-col{
+  flex-basis: 65%;
+}
+.email-left-col .strivemail{
+  display: flex;
+  margin-top: -5px;
+  margin-left:338px;
+  color:black;
+}
+.email-left-col i{
+  display:flex;
   margin-top: 130px;
-  margin-left: 100px;
+  margin-left: 80px;
   font-size:20px;
   color:black;
 }
-.strivemail{
-  margin-left:100px;
-}
+
 .payment{
-  margin-top: -20px!important;
-  margin-left: 280px !important;
+  position: absolute;
+  margin-top: -38px!important;
+  margin-left:633px !important;
+ 
 }
+.payment2{
+  margin-left: 633px;
+}
+
+
+.gift{
+  display:block;
+position: absolute;
+margin-left: 650px;
+margin-bottom:30px;
+}
+
+.gift2{
+  margin-top: 10px;
+  display:block;
+  margin-left:650px !important;
+}
+
+
+#plan{
+  padding: 0 220px;
+}
+
+
+.plan-row{
+display:flex;
+align-items: center;
+flex-wrap: wrap;
+}
+.plan-right-col{
+flex-basis:60%;
+display: flex;
+}
+.plan-left-col{
+flex-basis:40%;
+}
+
+.plan-right-col p{
+  margin-left: 10px;
+  margin-top:0px;
+    color: black;
+    font-weight: 600;
+  }
+  .plan-left-col h4{
+     text-transform: uppercase;
+     color: grey;
+     font-size: 23px;    
+  }
+
+  .plan-right-col a{
+    margin-left: 170px;
+  }
+
+
+
+  #settings{
+    padding: 0 220px;
+  }
+  
+  
+  .settings-row{
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+  }
+  .settings-right-col{
+  flex-basis:50%;
+
+  }
+  .settings-left-col{
+  flex-basis:50%;
+  }
+
+    .settings-left-col h4{
+       text-transform: uppercase;
+       color: grey;
+       font-size: 23px;    
+    }
+  
+    .settings-right-col a{
+      margin-left: -70px;
+      display:block;
+    }
+
+
+
+
+
+    #myprofile{
+      padding: 0 220px;
+    }
+    
+    
+    .profile-row{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    }
+    .profile-right-col{
+    flex-basis:50%;
+  
+    }
+    .profile-left-col{
+    flex-basis:50%;
+    }
+  
+      .profile-left-col h4{
+         text-transform: uppercase;
+         color: grey;
+         font-size: 23px;    
+      }
+    
+      .profile-right-col a{
+        margin-left: -70px;
+        display:block;
+      }
+
+
+      .profile2-right-col a{
+        margin-left: 530px;
+        display:block;
+        margin-top: -38px;
+        margin-bottom: 2px;
+      }
+    
+      .profile3-right-col a{
+        margin-left: 680px;
+        display:block;
+        margin-top: -38px;
+      }

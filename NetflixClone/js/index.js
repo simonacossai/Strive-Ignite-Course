@@ -142,7 +142,7 @@ const getMovie = (movieTitle, movies) => {
 
       movies.forEach(movie => {
         const markup = 
-           `<div class="movie col-md-4 col-lg-3">
+           `<div class="movie col-md-4 col-lg-3 col-sm-12">
                             <div class="card-body">
                               <img src=${movie.Poster}> </img>
                             </div>
@@ -238,7 +238,7 @@ getMovies2(favMovies2[0])
 
     posters.forEach(poster => {
       const markup2 = 
-         `<div class="movie col-md-4 col-lg-3">
+         `<div class="movie col-md-4 col-lg-3 col-sm-12">
                           <div class="card-body">
                             <img src=${poster.Poster}> </img>
                           </div>
