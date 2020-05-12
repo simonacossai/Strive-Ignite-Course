@@ -25,7 +25,7 @@ $(document).ready(function(){
 function search($search){
     $("#movies").html("");
 
-    if($search.length >= 3){
+    if($search.length >= 3 ){
         $("#loading").fadeIn();
 
         setTimeout(function(){
@@ -47,8 +47,9 @@ function getMovies(search){
     .then((response) => {
         $movies = response.data.Search;
         $html   = "";
-
+      
         $.each($movies, (index, movie) => {
+
             $html += `<div class="movie col-md-2">
                             <div class="card-body">
                                 <img src="${ movie.Poster }">
@@ -56,12 +57,14 @@ function getMovies(search){
                     </div>
                   `;
         });
-
         $("#movies").html($html);
+        
     });
 
     $("#loading").hide();
 }
+
+/*most watched section start*/
 
 const getMovie = (movieTitle, movies) => {
     return fetch(`https://www.omdbapi.com/?t=${movieTitle}&apikey=4a858268`)
@@ -139,7 +142,7 @@ const getMovie = (movieTitle, movies) => {
 
       movies.forEach(movie => {
         const markup = 
-           `<div class="movie col-md-2">
+           `<div class="movie col-md-4 col-lg-3">
                             <div class="card-body">
                               <img src=${movie.Poster}> </img>
                             </div>
@@ -150,39 +153,193 @@ const getMovie = (movieTitle, movies) => {
         listContainer.innerHTML += markup;
       });
     })
+/*most watched section end*/
 
 
-/*
-const getMovies = (movieTitle, movies) => {
-    return fetch(`https://www.omdbapi.com/?t=${movieTitle}&apikey=4a858268`)
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        return data;
-      })
-      .catch(error => {
-        console.warn(error);
-      });
-  };
 
 
-     const favMovies2 = [
-    "dragon-ball-super",
-    "Stranger Things",
-    "the-big-bang-theory",
-    "vikings",
-    "westworld",
-    "the-walking-dead",
-    "daredevil",
-    "marvel-s-agents-of-s-h-i-e-l-d",
-    "prison-break",
-    "mr-robot",
-    "rick-and-morty",
-    "one-punch-man",
-    "teen-wolf",
-    "brooklyn-nine-nine",
-    'lucifer'
-  ];
-*/
 
+/*watch again section start*/
+const getMovies2 = (movieTitle, movies) => {
+  return fetch(`https://www.omdbapi.com/?t=${movieTitle}&apikey=4a858268`)
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      return data;
+    })
+    .catch(error => {
+      console.warn(error);
+    });
+};
+
+
+   const favMovies2 = [
+    "shadowhunters",
+  "black-clover",
+  "the-big-bang-theory",
+  "vikings",
+  "westworld",
+  "quantico",
+  "daredevil",
+  "prison-break",
+  "mr-robot",
+  "rick-and-morty",
+  "one-punch-man",
+  "teen-wolf",
+  "brooklyn-nine-nine",
+  'lucifer'
+];
+
+
+
+const posters = [];
+let output2 = "";
+
+
+console.log(output2);
+
+
+getMovies2(favMovies2[0])
+  .then(poster => posters.push(poster))
+  .then(() => getMovie(favMovies2[1]))
+  .then(poster=> posters.push(poster))
+  .then(() => getMovie(favMovies2[2]))
+  .then(poster => posters.push(poster))
+  .then(() => getMovie(favMovies2[3]))
+  .then(poster=> posters.push(poster))
+  .then(() => getMovie(favMovies2[4]))
+  .then(poster => posters.push(poster))
+   .then(() => getMovie(favMovies2[5]))
+  .then(poster => posters.push(poster))
+      .then(() => getMovie(favMovies2[6]))
+  .then(poster => posters.push(poster))
+      .then(() => getMovie(favMovies2[7]))
+  .then(poster => posters.push(poster))
+      .then(() => getMovie(favMovies2[8]))
+  .then(poster => posters.push(poster))
+      .then(() => getMovie(favMovies2[9]))
+  .then(poster=> posters.push(poster))
+      .then(() => getMovie(favMovies2[10]))
+  .then(poster => posters.push(poster))
+      .then(() => getMovie(favMovies2[11]))
+  .then(poster => posters.push(poster))
+      .then(() => getMovie(favMovies2[12]))
+  .then(poster => posters.push(poster))
+      .then(() => getMovie(favMovies2[13]))
+  .then(poster => posters.push(poster))
+      .then(() => getMovie(favMovies2[14]))
+  .then(poster => posters.push(poster))
+
+  .then(() => {
+    console.log(posters);
+
+    const listContainer2 = document.querySelector(".films2");
+
+    posters.forEach(poster => {
+      const markup2 = 
+         `<div class="movie col-md-4 col-lg-3">
+                          <div class="card-body">
+                            <img src=${poster.Poster}> </img>
+                          </div>
+                  </div>
+              
+      `;
+
+      listContainer2.innerHTML += markup2;
+    });
+  })
+/*watch again section end*/
+
+
+
+
+const getMovies3 = (movieTitle, movies) => {
+  return fetch(`https://www.omdbapi.com/?t=${movieTitle}&apikey=4a858268`)
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      return data;
+    })
+    .catch(error => {
+      console.warn(error);
+    });
+};
+
+
+   const favMovies3 = [
+  "once-upon-a-time",
+  "the-good-doctor",
+  "orange-is-the-new-black",
+  "the-magicians",
+  "limitless",
+  "young-sheldon",
+  "narcos",
+  "modern-family",
+  "peaky-blinders",
+  "american-horror-story",
+  "the-witcher",
+  "south-park",
+  "sense8",
+  "pretty-little-liars"
+];
+
+
+
+const posters2 = [];
+let output3 = "";
+
+
+console.log(output3);
+
+
+getMovies3(favMovies3[0])
+  .then(poster => posters2.push(poster))
+  .then(() => getMovie(favMovies3[1]))
+  .then(poster=> posters2.push(poster))
+  .then(() => getMovie(favMovies3[2]))
+  .then(poster => posters2.push(poster))
+  .then(() => getMovie(favMovies3[3]))
+  .then(poster=> posters2.push(poster))
+  .then(() => getMovie(favMovies3[4]))
+  .then(poster => posters2.push(poster))
+   .then(() => getMovie(favMovies3[5]))
+  .then(poster => posters2.push(poster))
+      .then(() => getMovie(favMovies3[6]))
+  .then(poster => posters2.push(poster))
+      .then(() => getMovie(favMovies3[7]))
+  .then(poster => posters2.push(poster))
+      .then(() => getMovie(favMovies3[8]))
+  .then(poster => posters2.push(poster))
+      .then(() => getMovie(favMovies3[9]))
+  .then(poster=> posters2.push(poster))
+      .then(() => getMovie(favMovies3[10]))
+  .then(poster => posters2.push(poster))
+      .then(() => getMovie(favMovies3[11]))
+  .then(poster => posters2.push(poster))
+      .then(() => getMovie(favMovies3[12]))
+  .then(poster => posters2.push(poster))
+      .then(() => getMovie(favMovies3[13]))
+  .then(poster => posters2.push(poster))
+      .then(() => getMovie(favMovies3[14]))
+  .then(poster => posters2.push(poster))
+
+  .then(() => {
+    console.log(posters2);
+
+    const listContainer3 = document.querySelector(".films3");
+
+    posters2.forEach(poster => {
+      const markup3 = 
+         `<div class="movie col-md-4 col-lg-3">
+                          <div class="card-body">
+                            <img src=${poster.Poster}> </img>
+                          </div>
+                  </div>
+              
+      `;
+
+      listContainer3.innerHTML += markup3;
+    });
+  })
