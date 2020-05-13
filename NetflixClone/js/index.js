@@ -113,7 +113,7 @@ function getMovies(search){
       seriesContainer.innerHTML += `
       <div class="movie col-md-4 col-lg-3">
       <div class="card-body">
-      <a href="details.html" target="_blank"><img id= poster src = ${movie.Poster} 
+      <a href="details.html"><img id= poster src = ${movie.Poster} 
       alt = ${movie.Title} onclick="selected(this.alt)"><a>
       <p class="title">${movie.Title}</p>
       </div>
@@ -169,7 +169,7 @@ function getMovies(search){
       seriesContainer.innerHTML += `
       <div class="movie col-md-4 col-lg-3">
       <div class="card-body">
-      <a href="details.html" target="_blank"><img id= poster src = ${movie.Poster} 
+      <a href="details.html"><img id= poster src = ${movie.Poster} 
       alt = ${movie.Title} onclick="selected(this.alt)"><a>
       <p class="title">${movie.Title}</p>
       </div>
@@ -186,10 +186,9 @@ function getMovies(search){
   function createPoster(movie) {
       posterContainer.innerHTML += ` <div id="title"> <h1> ${movie.Title}</h1> </div>
       <div id="poster"> <img src= ${movie.Poster}> </div>
-      <p>Seasons: ${movie.totalSeasons}
+     <div id="season"> <p>Seasons: ${movie.totalSeasons}</div>
       <div id="plot"><p>Plot: ${movie.Plot} </div>
       <div id="rating"> <p>Rating: ${movie.imdbRating}<p>
-      <p>Vote: ${movie.imdbVotes}
      `
   }
  /*watch again end*/
@@ -225,7 +224,7 @@ function getMovies(search){
       seriesContainer.innerHTML += `
       <div class="movie col-md-4 col-lg-3">
       <div class="card-body">
-      <a href="details.html" target="_blank"><img id= poster src = ${movie.Poster} 
+      <a href="details.html"><img id= poster src = ${movie.Poster} 
       alt = ${movie.Title} onclick="selected(this.alt)"><a>
       <p class="title">${movie.Title}</p>
       </div>

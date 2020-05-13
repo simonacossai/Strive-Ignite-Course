@@ -8,11 +8,10 @@
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     line-height: 1.4;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-x: hidden; 
   }
   
   img {
-    
     max-width: 100%;
   }
   
@@ -48,7 +47,7 @@
     padding: 20px 20px 0 20px;
     position: fixed;
     top: 0;
-  margin-bottom: 40px;
+    margin-bottom: 40px;
     display: grid;  
     grid-gap:5px;
     grid-template-columns: 1fr 4fr 1fr;
@@ -417,3 +416,32 @@ input{
     }
 }
 
+#title{
+  color: #E50914;  
+}
+
+
+#posters{
+  text-align: center;
+  align-items:center;
+  justify-content: center;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+#poster{
+  margin-bottom:20px; 
+}
+#posters p{
+  font-size: 20px;
+}
+#plot{
+ line-height: 1.5rem;
+}
+
+#rating{
+line-height: 1rem;
+}
+hr{
+  border: 0.5px solid grey;
+  width: 70%;
+}
