@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- HEADER -->
+        <header>
+          <div class="netflixLogo">
+            <a id="logo" href="#home"><a href="index.html"><img src="https://fontmeme.com/permalink/200505/d7fa46218581e004139f5ad9298e915d.png" alt="netflix-font" border="0"></a></a>
+          </div>      
+          <nav class="main-nav">                
+            <a href="#">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+            <a href="#">Recently Added</a>
+            <a href="#">MyList</a>   
+          </nav>
+          <nav class="sub-nav">
+          <a href="#">  
+            <input type="text" class="form-control" id="search_field" placeholder="Search..." style="height: 30px;" style="width: 70px;"></a>
+            <a href="#"><i class="fas fa-search sub-nav-logo"></i></a>
+            <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a>
+            <a href="account.html">Account</a>        
+          </nav>      
+        </header>
+        <!-- END OF HEADER -->
+
+  <!-- MAIN CONTAINER -->
+  <section class="main-container" >
+    <div id="image-container">
+  </div>
+  <div id="app-container">
+      <div id="main">
+          <div id="posters">
+              here there will be the card
+          </div>
+      </div>
+  </div>
+  
+
+
+
+  <br>
+  <br>
+
+    </div>
+
+
+          <!-- LINKS-->
+    <section class="link">
+        <div class="logos">
+          <a href="#"><i class="fab fa-facebook-square fa-2x logo"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-2x logo"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-2x logo"></i></a>
+          <a href="#"><i class="fab fa-youtube fa-2x logo"></i></a>
+        </div>
+        <div class="sub-links">
+          <ul>
+            <li><a href="#">Audio and Subtitles</a></li>
+            <li><a href="#">Audio Description</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Media Center</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Legal Notices</a></li>
+            <li><a href="#">Corporate Information</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- END OF LINKS -->
+  
+      <!-- FOOTER-->
+      <footer>
+        <p> Netflix, Inc.</p>
+        <p>Simona Cossai - 2020</p>
+      </footer>
+    
+    </div>
+  
+  
+    <script>
+      window.onload = async() => {
+
+          await getDetails();
+
+      }
+  </script>
+  <script src="index.js "></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+    <script
+src="https://code.jquery.com/jquery-3.1.1.min.js"
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

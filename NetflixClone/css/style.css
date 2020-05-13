@@ -95,7 +95,25 @@
     text-decoration: none;
     margin: 10px;  
   }
-  
+      /* width */
+::-webkit-scrollbar {
+  width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+  background: #181818;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+  background: #121212;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  }
 
 .container {
   text-align: left;
@@ -117,18 +135,22 @@
   overflow:auto;
 
 }
+.title{
+  position: absolute;
+  top: 70%;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px #000000;
+}
 
 
 .films2 img {
   width: 300px;
   height: 300px;
-  padding: 2px;
   background-color: black;
   z-index: 0;
 }
 
 .films2 { 
-
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -139,7 +161,6 @@
 .films3 img {
   width: 300px;
   height: 250px;
-  padding: 2px;
   background-color: black;
   z-index: 0;
 }
@@ -267,31 +288,17 @@
   @media(max-width: 900px) {
   
     header {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: 
-      "nt nt nt  .  .  . sb . . . "
-      "mn mn mn mn mn mn  mn mn mn mn";
+      display:flex;
     }
   
-    .box {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(4, minmax(100px, 1fr));
-    }
-  
+   
   }
   
   @media(max-width: 700px) {
   
     header {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: 
-      "nt nt nt  .  .  . sb . . . "
-      "mn mn mn mn mn mn  mn mn mn mn";
+      display: flex;
+
     }
   
     .box {
@@ -301,15 +308,18 @@
     }
   
     .sub-links ul {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(3, 1fr);
+      display:block;
+      text-align: center;
     }
      
   }
   
   @media(max-width: 500px) {
   
+    .title{
+   display:none;
+    }
+    
     .wrapper {
       font-size: 15px;
     }
@@ -346,21 +356,14 @@
       font-size: 18px;
     }
   
-   
+ .link{
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   margin-right: 30%;
+ }
   
-    .box {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(1, 1fr);
-      text-align: center;    
-    }
   
-    .box a:hover {
-      transition: transform .3s;
-      -ms-transform: scale(1);
-      -webkit-transform: scale(1);  
-      transform: scale(1.2);
-    }
   
     .logos {
       display: grid;
@@ -393,9 +396,7 @@ input{
     width: 100%;
     height: 200px;
     object-fit: cover;
-    transition: all .4s linear;
 }
-
 
 .card-body{
     padding: 0px;
@@ -404,10 +405,10 @@ input{
 
 
 #loading p{
-    animation: animZoom 1s ease-out infinite;
+    animation: zoom 1s ease-out infinite;
 }
 
-@keyframes animZoom{
+@keyframes zoom{
     0%, 100%{
         transform: scale(1);
     }
