@@ -2,24 +2,14 @@ $(document).ready(function(){
 
     $("#loading").hide();
 
-    $type   = ['movie', 'series'];
+    $type   = ['series'];
     $search = "";
-
 
     $('#search_field').on('keyup', function(){
         $search = $(this).val();
 
         search($search);
     });
-
-    $(".type").click(function(){
-        if($(this).is(":checked")){
-            $type = $(this).val();
-            
-            search($search);
-        }
-    })
-
 });
 
 function search($search){
@@ -58,19 +48,15 @@ function getMovies(search){
                   `;
         });
         $("#movies").html($html);
-        
     });
-
     $("#loading").hide();
 }
 
 
 
-
-
   /*latest series start*/
-  let API_key = "&apikey=4a858268";
-  let titles = [   
+let API_key = "4a858268";
+let titles = [   
 "quantico",
 "daredevil",
 "Supernatural",
@@ -91,7 +77,7 @@ function getMovies(search){
   
   
   async function loadMovies(ImdbID) {
-      var response = await fetch("http://www.omdbapi.com/?t=" + ImdbID+ API_key);
+      var response = await fetch("http://www.omdbapi.com/?t=" + ImdbID+ "&apikey="+ API_key);
       var informations = await response.json();
       return informations;
   }
@@ -147,7 +133,7 @@ function getMovies(search){
   
   
   async function loadMovies(ImdbID) {
-      var response = await fetch("http://www.omdbapi.com/?t=" + ImdbID+ API_key);
+      var response = await fetch("http://www.omdbapi.com/?t=" + ImdbID+ "&apikey="+ API_key);
       var informations = await response.json();
       return informations;
   }
@@ -202,7 +188,7 @@ function getMovies(search){
   
   
   async function loadMovies(ImdbID) {
-      var response = await fetch("http://www.omdbapi.com/?t=" + ImdbID+ API_key);
+      var response = await fetch("http://www.omdbapi.com/?t=" + ImdbID+"&apikey="+ API_key);
       var informations = await response.json();
       return informations;
   }
