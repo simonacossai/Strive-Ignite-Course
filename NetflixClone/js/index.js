@@ -85,7 +85,7 @@ let titles = [
   async function getInformations() {
       var seriesContainer = document.querySelector(".films");
       seriesContainer.innerHTML = "";
-  
+
       titles.forEach(title => {
           loadMovies(title).then(movie => getPosters(movie, seriesContainer));
       })
